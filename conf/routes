@@ -17,10 +17,10 @@ GET     /assets/*file               controllers.Assets.versioned(path="/public",
 GET     /Welcome/:name/:lastname    controllers.HomeController.welcome(name: String,lastname: String)
 
 GET     /books/create               controllers.BooksController.create()
-GET     /books                      controllers.BooksController.index
-GET     /books/:id                   controllers.BooksController.show(id : Integer)
+GET     /books                      controllers.BooksController.index()
+GET     /books/:id                  controllers.BooksController.show(id : Integer)
 GET     /books/edit/:id             controllers.BooksController.edit(id: Integer)
 POST    /books/edit                 controllers.BooksController.update()
 POST    /books/create               controllers.BooksController.save()
-GET     /books/:id                  controllers.BooksController.destroy(id: Integer)
+GET     /books/delete/:id           controllers.BooksController.destroy(id: Integer)
 

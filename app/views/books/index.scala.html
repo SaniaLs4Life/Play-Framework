@@ -1,20 +1,16 @@
 @(books : Set[Book])
 
-<html>
-    <head>
-          <title>All Books</title>
+@layout("All Books"){
+    <h1>
+        All Books
+    </h1>
+    @for(book <-books){
+        <p><b>Id : </b> @book.id</p>
+        <b>Book : </b><a href="@routes.BooksController.show(book.id)">@book.title</a>
+        <p><b>Price : </b>@book.price</p>
+        <p><b>Author : </b> @book.author</p>
+        <br>
+    }
 
-    </head>
-<body>
-     <h1>
-         All Books
-     </h1>
-     @for(book <-books){
-       <a href="">@book.title</a>
-         <p>Price: @book.price</p>
-         <p>AuthorL: @book.author</p>
-
-     }
-</body>
-
-</html>
+    <p><b><a href="@routes.BooksController.create()">Create a Book</a></b></p>
+}

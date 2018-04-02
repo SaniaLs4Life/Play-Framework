@@ -3,12 +3,19 @@ package models;
 import java.util.HashSet;
 import java.util.Set;
 
-public class Book {
+//import com.avaje.ebean.Model;
+//import javax.persistence.Entity;
+//import javax.persistence.Id;
 
+//@Entity
+public class Book /*extends Model*/ {
+
+    //@Id
     public  Integer id;
     public String title;
     public String author;
     public Integer price;
+    //public static final Finder<Long, Task> find = new Finder<>(Task.class);
 
     public Book(){};
     public  Book(Integer id,Integer price,String title,String author){
@@ -23,8 +30,8 @@ public class Book {
 
     static {
         books=new HashSet<>();
-        books.add(new Book( 1,10,  "c++",  "ABC"));
-        books.add(new Book( 2,  20,"java",  "xyz"));
+        books.add(new Book( 1,10,  "C++",  "Burak"));
+        books.add(new Book( 2,  20,"Java",  "Hakan"));
     }
 
     public static  Set<Book> allBooks(){
