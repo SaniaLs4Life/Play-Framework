@@ -17,6 +17,7 @@ public class Book /*extends Model*/ {
     public Integer price;
     //public static final Finder<Long, Task> find = new Finder<>(Task.class);
     public String a;
+    public String b;
     public Book(){};
     public  Book(Integer id,Integer price,String title,String author){
 
